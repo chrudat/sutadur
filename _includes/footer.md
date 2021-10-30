@@ -1,0 +1,1 @@
+Statische Webseiten mit <a href="https://jekyllrb.com">Jekyll</a> · Hosting auf <a href="https://pages.github.com">GitHub Pages</a> · Mehr unter <a href="https://github.com/chrudat">https://github.com/chrudat</a> · &copy; 2019-2021 chrudat

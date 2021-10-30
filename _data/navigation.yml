@@ -1,0 +1,6 @@
+- name: Home
+  link: index.html
+- name: Datenschutz
+  link: datenschutz.html
+- name: Impressum
+  link: impressum.html

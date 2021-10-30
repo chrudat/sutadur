@@ -1,0 +1,14 @@
+name: Time for new ideas
+
+lang: de_DE
+     
+plugins:
+  - jekyll-feed
+  #- jekyll-sitemap
+  - jekyll-seo-tag
+  
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
