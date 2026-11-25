@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Pause</title>
+  <title>Vorerst leer</title>
   <style>
     :root {
       --bg: #fafafa;
@@ -65,34 +65,32 @@
       color: var(--muted);
     }
 
-    /* Dezente Schwebe-Animation für den Punkt/Cursor */
-    @keyframes pulse {
-      0%, 100% { opacity: 0.25; }
-      50% { opacity: 1; }
+    /* Sanfte Wellenbewegung */
+    @keyframes drift {
+      0%, 100% { transform: translateX(-2px); opacity: 0.4; }
+      50% { transform: translateX(2px); opacity: 0.9; }
     }
 
-    .pulse-dot {
-      animation: pulse 3.5s ease-in-out infinite;
+    .wave-offset {
+      animation: drift 5s ease-in-out infinite;
     }
   </style>
 </head>
 <body>
   <main>
-    <!-- Minimalistische SVG-Grafik: Eine abstrahierte Horizontlinie / ein offener Rahmen mit einem pulsierenden Punkt -->
+    <!-- Minimalistische SVG-Grafik: Ein leerer Kreis mit einer offenen Unterbrechung und einer ruhigen Welle -->
     <svg class="illustration" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <!-- Leerer, unvollständiger Rahmen (symbolisiert das Unfertige / Offene) -->
-      <path d="M24 32V24H32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M64 24H72V32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M72 64V72H64" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M32 72H24V64" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Offener Kreis (symbolisiert einen unvollständigen Zyklus / offenes Ende) -->
+      <path d="M72 48C72 61.2548 61.2548 72 48 72C34.7452 72 24 61.2548 24 48C24 34.7452 34.7452 24 48 24C55.4 24 62.02 27.35 66.42 32.62" 
+            stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       
-      <!-- Ruhige Horizontlinie & kleiner Impuls -->
-      <line x1="34" y1="52" x2="54" y2="52" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <circle class="pulse-dot" cx="61" cy="52" r="2.5" fill="currentColor"/>
+      <!-- Minimalistische Welle im Inneren -->
+      <path class="wave-offset" d="M36 49C39 45 42 45 45 49C48 53 51 53 54 49C57 45 60 45 62 47.5" 
+            stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     </svg>
 
-    <h1>Hier ist gerade Sendepause.</h1>
-    <p>Irgendwann kommt hier wieder was Neues – vielleicht aber auch nicht.</p>
+    <h1>Gerüchteweise passiert hier noch was.</h1>
+    <p>Vielleicht demnächst. Vielleicht auch gar nicht.</p>
   </main>
 </body>
 </html>
