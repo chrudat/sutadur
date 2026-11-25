@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Pause</title>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --text: #1c1c1e;
+      --muted: #6e6e73;
+      --accent: #3a3a3c;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111113;
+        --text: #f2f2f7;
+        --muted: #8e8e93;
+        --accent: #d1d1d6;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      max-width: 440px;
+      text-align: center;
+    }
+
+    .illustration {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 2rem;
+      color: var(--accent);
+    }
+
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* Dezente Schwebe-Animation für den Punkt/Cursor */
+    @keyframes pulse {
+      0%, 100% { opacity: 0.25; }
+      50% { opacity: 1; }
+    }
+
+    .pulse-dot {
+      animation: pulse 3.5s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Minimalistische SVG-Grafik: Eine abstrahierte Horizontlinie / ein offener Rahmen mit einem pulsierenden Punkt -->
+    <svg class="illustration" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Leerer, unvollständiger Rahmen (symbolisiert das Unfertige / Offene) -->
+      <path d="M24 32V24H32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M64 24H72V32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M72 64V72H64" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M32 72H24V64" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Ruhige Horizontlinie & kleiner Impuls -->
+      <line x1="34" y1="52" x2="54" y2="52" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <circle class="pulse-dot" cx="61" cy="52" r="2.5" fill="currentColor"/>
+    </svg>
+
+    <h1>Hier ist gerade Sendepause.</h1>
+    <p>Irgendwann kommt hier wieder was Neues – vielleicht aber auch nicht.</p>
+  </main>
+</body>
+</html>
